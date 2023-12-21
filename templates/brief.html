@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <div class="brief-container">
+        {% for d in data %}
+            <div>
+                <a href="{{ url_for('brief', id=d.0) }}"><h1>{{d.1}}</h1></a>
+                <p style="text-align: justify;">{{d.2}}</p>
+                <span>posted on {{d.3}}</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

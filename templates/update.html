@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Blog{% endblock %}
+
+{% block content %}
+    {% for d in data %}
+        <div class="admin-page-container">
+            <form method="post">
+                <div class="input-group">
+                    <span class="input-group-text">Title</span>
+                    <input type="text" name="title" id="title" aria-label="First name" value="{{d.1}}" class="form-control">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Content</span>
+                    <textarea class="form-control" name="content" id="content" aria-label="With textarea">{{d.2}}</textarea>
+                </div>
+                <div class="btn-align">
+                    <button type="submit" id="add_btn" class="btn btn-success" disabled>Update</button>
+                    <a href="/logout">
+                        <button type="button" class="btn btn-danger">Log out</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    {%  endfor %}
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{%  endblock %}

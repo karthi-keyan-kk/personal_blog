@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin_Page{% endblock %}
+
+{% block content %}
+    <div class="admin-page-container">
+        <form method="post">
+            <div class="input-group">
+                <span class="input-group-text">Title</span>
+                <input type="text" name="title" id="title" aria-label="First name" class="form-control">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Content</span>
+                <textarea class="form-control" name="content" id="content" aria-label="With textarea"></textarea>
+            </div>
+            <div class="btn-align">
+                <button type="submit" id="add_btn" class="btn btn-success" disabled>Add</button>
+                <a href="/logout">
+                    <button type="button" class="btn btn-danger">Log out</button>
+                </a>
+            </div>
+        </form>
+    </div>
+    {% for d in data %}
+        <div class="admin-page-container-2">
+            <div class="admin-page-container-3">
+                <a href="{{ url_for('brief', id=d.0) }}"><h1>{{d.1}}</h1></a>
+                <p>{{d.2}}</p>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <div>
+                    <form action="{{ url_for('update_blog', id=d.0) }}" class="form1-edit">
+                        <button class="btn btn-success">Edit</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="{{ url_for('delete', id=d.0) }}" class="form2-del">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div>
+                    <p>posted on {{d.3}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{%  endblock %}

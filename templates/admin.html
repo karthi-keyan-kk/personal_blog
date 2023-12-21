@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Page{% endblock %}
+
+{% block content %}
+    <div class="admin-container"> 
+        {% if error %}
+            <p style="color: red;">{{error}}</p>
+        {% endif %}
+        <form id="form1" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" name="pwd" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">    
+            </div>
+            <div class="btn_div">
+                <button type="submit" id="log_in_btn" class="btn btn-primary">Log in</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
