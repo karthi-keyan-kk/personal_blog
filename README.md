@@ -1,5 +1,5 @@
 <h1>Project</h1>
-<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;In this projeact, You can view my blog, what I have posted but you can not change anything.</p>
+<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;In this project, You can view my blog, what I have posted but you can not change anything.</p>
 
 <h1>Requirements</h1>
 <ul>
