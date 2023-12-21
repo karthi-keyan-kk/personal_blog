@@ -40,5 +40,16 @@
     <li><b>Comments:</b> Jinja2 allows commenting within templates using <b>&apos;{# Comment #}&apos;</b> syntax, allowing developers to add notes without affecting the rendered output.</li><br>
 </ol>
 
-<h1>templates</h1>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;Here, I used totally six templates. <b>&quot;Base.html&quot;</b> template is the base template</p>
+<h1>Templates</h1>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;Here, I used totally six templates. <b>&quot;base.html&quot;</b> template is the base template for every other template. <b>&quot;home.html&quot;</b> template will display the all post in short with date when it was posted. If we click the heading that particular content will show briefly in the <b>&quot;brief.html&quot;</b> template. And in <b>&quot;admin.html&quot;</b> template, User(Blog Owner) will log in into their account that will load the <b>&quot;adminpage.html&quot;</b> template, they can add, edit or delete their blog content in that template. By clicking edit button it will render <b>&quot;update.html&quot;</b> template to edit the content.</p><br>
+
+<h1>PyMySQL Module</h1>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;The <b>&quot;pymysql&quot;</b> module is a Python client library used to interact with MySQL databases. It provides an interface for Python programs to connect to a MySQL server, execute SQL queries, and manage data within the database.</p><br>
+<p>Key functionalities and features of <b>&apos;pymysql&apos;</b>:</p>
+<ol>
+    <li><b>Database Connection: &apos;pymysql &apos;</b> allows establishing connections to MySQL databases by providing methods to connect to a MySQL server using host, user, password, and database information.</li><br>
+    <li><b>Executing Queries:</b> It enables executing SQL queries on the connected MySQL database using methods like <b>&apos;execute()&apos;</b> or <b>&apos;executemany()&apos;</b>. This allows for performing operations such as SELECT, INSERT, UPDATE, DELETE, and more.</li><br>
+    <li><b>Fetching Results: &apos;pymysql&apos;</b> provides methods to fetch query results, allowing access to the retrieved data in various formats such as tuples, dictionaries, or custom data structures.</li><br>
+    <li><b>Transactions:</b> It supports managing transactions by providing methods for committing changes (<b>&apos;commit( )&apos;</b>) or rolling back (<b>&apos;rollback( )&apos;</b>) changes made within a transaction.</li><br>
+    <li><b>Parameterized Queries: &apos;pymysql&apos;</b> supports parameterized queries, which help prevent SQL injection by allowing the use of placeholders for query parameters</li><br>
+</ol>
