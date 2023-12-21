@@ -41,7 +41,7 @@
 </ol>
 
 <h1>Templates</h1>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;Here, I used totally six templates. <b>&quot;base.html&quot;</b> template is the base template for every other template. <b>&quot;home.html&quot;</b> template will display the all post in short with date when it was posted. If we click the heading that particular content will show briefly in the <b>&quot;brief.html&quot;</b> template. And in <b>&quot;admin.html&quot;</b> template, User(Blog Owner) will log in into their account that will load the <b>&quot;adminpage.html&quot;</b> template, they can add, edit or delete their blog content in that template. By clicking edit button it will render <b>&quot;update.html&quot;</b> template to edit the content.</p><br>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;Here, I used totally six templates. <b>&quot;base.html&quot;</b> template is the base template for every other template. <b>&quot;home.html&quot;</b> template will display the all post in short along with date like when it was posted. If we click the heading that will show particular content in briefly in the <b>&quot;brief.html&quot;</b> template. And in <b>&quot;admin.html&quot;</b> template, User(Blog Owner) will log in into their account that will load the <b>&quot;adminpage.html&quot;</b> template, they can add, edit or delete their blog content in that template. By clicking edit button it will render <b>&quot;update.html&quot;</b> template to edit the content.</p><br>
 
 <h1>PyMySQL Module</h1>
 <p>&nbsp; &nbsp; &nbsp; &nbsp;The <b>&quot;pymysql&quot;</b> module is a Python client library used to interact with MySQL databases. It provides an interface for Python programs to connect to a MySQL server, execute SQL queries, and manage data within the database.</p><br>
