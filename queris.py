@@ -7,7 +7,7 @@ class Query:
     @staticmethod
     def auth():
         conn, c = connect.sqlConnector()
-        query = "SELECT * FROM Auth"
+        query = "SELECT * FROM TABLE_NAME"
         c.execute(query)
         data = c.fetchall()
         conn.commit()
@@ -19,7 +19,7 @@ class Query:
     def insert_data(title: str, content: str, date: str):
         conn, c = connect.sqlConnector()
         content_escaped = conn.escape_string(content)
-        query = "INSERT INTO user(title, content, date) VALUES('{}', '{}', '{}')".format(title, content_escaped, date)
+        query = "INSERT INTO TABLE_NAME(title, content, date) VALUES('{}', '{}', '{}')".format(title, content_escaped, date)
         c.execute(query)
         conn.commit()
         conn.close()
@@ -28,7 +28,7 @@ class Query:
     @staticmethod
     def all_data():
         conn, c = connect.sqlConnector()
-        query = "SELECT * FROM user"
+        query = "SELECT * FROM TABLE_NAME"
         c.execute(query)
         data = c.fetchall()
         conn.commit()
@@ -39,7 +39,7 @@ class Query:
     @staticmethod
     def data(id: int):
         conn, c = connect.sqlConnector()
-        query = f"SELECT * FROM user WHERE id={int(id)}"
+        query = f"SELECT * FROM TABLE_NAME WHERE id={int(id)}"
         c.execute(query)
         data = c.fetchall()
         conn.commit()
@@ -60,7 +60,7 @@ class Query:
     @staticmethod
     def count_user(id: int):
         conn, c = connect.sqlConnector()
-        user = f"SELECT COUNT(*) FROM user WHERE id={int(id)}"
+        user = f"SELECT COUNT(*) FROM TABLE_NAME WHERE id={int(id)}"
         a = c.execute(user)
         conn.commit()
         conn.close()
@@ -70,7 +70,7 @@ class Query:
     @staticmethod
     def delete_blog(id: int):
         conn, c = connect.sqlConnector()
-        query = f"DELETE FROM user WHERE id={int(id)}"
+        query = f"DELETE FROM TABLE_NAME WHERE id={int(id)}"
         c.execute(query)
         conn.commit()
         conn.close()

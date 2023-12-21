@@ -1,9 +1,9 @@
 import pymysql as pms
 
 class Connection:
-    __UserName = "root"
-    __password = "@karthiKeyan1234"
-    __DB = "karthikeyan"
+    __UserName = "USER_NAME"
+    __password = "PASSWORD"
+    __DB = "DATABASE_NAME"
 
     @staticmethod
     def sqlConnector():
