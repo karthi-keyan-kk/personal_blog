@@ -3,7 +3,7 @@ from queris import Query as query
 from datetime import date
 
 app = Flask(__name__)
-app.secret_key = "qwertyuiop@Kmnbvcxz#13579"
+app.secret_key = "YOUR_KEY"
 
 data = query.auth()
 
